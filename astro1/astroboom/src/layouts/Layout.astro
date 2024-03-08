@@ -3,35 +3,39 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<header>
+			<div class="container">hola</div>
+		</header>
+
 		<slot />
+
+		<footer class="container">pie de pagina</footer>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+	header {
+		height: 32px;
 	}
-	html {
+	html,
+	body {
+		margin: 0;
+		padding: 0;
 		font-family: system-ui, sans-serif;
-		background: white;
-		background-size: 224px;
+	}
+	.container {
+		background: yellow;
+		width: 800px;
+		height: auto;
+		margin: 0 auto;
+	}
+	footer {
+		background: chocolate;
+		height: 32px;
 	}
 	code {
 		font-family:
