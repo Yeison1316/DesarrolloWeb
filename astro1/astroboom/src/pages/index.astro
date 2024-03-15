@@ -18,10 +18,9 @@ const flags = [
 ];
 ---
 
-<Layout title="Welcome to Astro.">
-	<div class="container">
-		<div class="banner"></div>
-		<div class="lang">
+<Layout title="Duolingo Clone">
+	<div class="container flex items-center m-auto max-w[1200px]">
+		<div class="m-auto container flex flex-row justify-between">
 			{
 				flags.map((flag) => (
 					<a href="#">
@@ -33,29 +32,3 @@ const flags = [
 		</div>
 	</div>
 </Layout>
-
-<style>
-	.lang {
-		height: 46px;
-		display: flex;
-	}
-	& div {
-		height: 100%;
-		background: purple;
-	}
-	& a {
-		transition: background 500 ease-in-out;
-		display: flex;
-		align-items: center;
-		padding: 0 8px;
-		text-decoration: none;
-		height: 100%;
-		background: purple;
-	}
-	& a:hover {
-		background: red;
-	}
-	.banner {
-		height: 520px;
-	}
-</style>
