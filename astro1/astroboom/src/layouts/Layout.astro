@@ -17,12 +17,25 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 					Idioma de la pagina
 					<Icon name="mdi:chevron-down" />
 					<div class="hidden group-hover:block absolute w-64 top-6 h-96 bg-slate-400">
-						<Icon name="flag:ad-1x1" />
+						<Icon name="mdi:account" />
 					</div>
 				</a>
 			</div>
 		</header>
-
+		<div class=" mt-32 flex m-auto justify-center flex-col md:flex-row">
+			<div class="max-w-lg">
+				<img src="/image.svg">
+			</div>
+			<div class=" w-1/2 flex max-w-lg items-center justify-center flex-col">
+					<h1 class="text-3xl font-bold text-center text-slate-700">La forma divertida, efectiva y gratis de aprender un idioma!</h1>
+					<div class="hover:cursor-pointer hover:bg-[#7edd36] w-80 h-10 bg-[#58CC02] flex items-center justify-center border-b-4 border-[#4c8a1c] mt-2 rounded-xl">
+						<h1 class="px-20 text-lg font-bold text-white">EMPIEZA AHORA</h1>
+					</div>
+					<div class="hover:cursor-pointer hover:bg-[#ebeee7] w-80 h-10 bg-[#ffffff] flex items-center justify-center border-b-4 border-[#c5ccbf] mt-2 rounded-xl border-2">
+						<h1 class="text-lg font-bold text-[#1CB0F6]">YA TENGO CUENTA</h1>
+					</div>
+			</div>
+		</div>
 		<slot class=" container max-w-[1200px]" />
 
 		<footer class="container">pie de pagina</footer>
