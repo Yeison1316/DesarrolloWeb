@@ -2,6 +2,7 @@
 const { title } = Astro.props;
 import { Icon } from 'astro-icon/components'
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+
 ---
 
 <!doctype html>
@@ -36,14 +37,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 					</div>
 			</div>
 		</div>
-		<div class="mt-32 flex m-auto justify-center space-x-2 border-y-2 p-2">
-			<div class="flex justify-center items-center m-0">
-				<Icon name="flagpack:ar"/>
-			</div>
-			<div class="flex justify-center items-center">
-				<h1 class="">Ingles</h1>
-			</div>
-		</div>
+
 		<slot class=" container max-w-[1200px]" />
 
 		<footer class="container">pie de pagina</footer>

@@ -1,34 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import { Icon } from 'astro-icon/components'
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const flags = [
 	{
-		flag: "",
-		name: "Banddera 1",
+		flag: "flagpack:us",
+		name: "INGLES",
 	},
 	{
-		flag: "",
-		name: "Banddera 2",
+		flag: "flagpack:fr",
+		name: "FRANCES",
 	},
 	{
-		flag: "",
-		name: "Banddera 3",
+		flag: "flagpack:de",
+		name: "ALEMAN",
+	},
+	{
+		flag: "flagpack:it",
+		name: "ITALIANO",
+	},
+	{
+		flag: "flagpack:br",
+		name: "PORTUGUES",
+	},
+	{
+		flag: "flagpack:es",
+		name: "CATALAN",
+	},
+	{
+		flag: "flagpack:ru",
+		name: "RUSO",
+	},
+	{
+		flag: "flagpack:se",
+		name: "SUECO",
 	},
 ];
 ---
 
 <Layout title="Duolingo Clone">
-	<div class="container flex items-center m-auto max-w[1200px]">
-		<div class="m-auto container flex flex-row justify-between">
+		<div class="mt-32 flex m-auto justify-center space-x-6 border-y-2 p-2">
 			{
 				flags.map((flag) => (
 					<a href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m14.303 6-3-2H6V2H4v20h2v-8h4.697l3 2H20V6z" /></svg>
-						{flag.name}
+						<div class="flex justify-center items-center">
+						<Icon name={flag.flag} class='w-9 h-8 border-2 rounded-lg my-2 p-0 border-white'/>
+						<h1 class="text-sm ml-2 font-bold text-[#777777]">{flag.name}</h1>
+						</div>
 					</a>
 				))
 			}
 		</div>
-	</div>
 </Layout>
