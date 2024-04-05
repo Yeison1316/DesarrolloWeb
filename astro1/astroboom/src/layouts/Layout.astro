@@ -2,7 +2,40 @@
 const { title } = Astro.props;
 import { Icon } from 'astro-icon/components'
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-
+const flags = [
+	{
+		flag: "flagpack:us",
+		name: "INGLES",
+	},
+	{
+		flag: "flagpack:fr",
+		name: "FRANCES",
+	},
+	{
+		flag: "flagpack:de",
+		name: "ALEMAN",
+	},
+	{
+		flag: "flagpack:it",
+		name: "ITALIANO",
+	},
+	{
+		flag: "flagpack:br",
+		name: "PORTUGUES",
+	},
+	{
+		flag: "flagpack:es",
+		name: "CATALAN",
+	},
+	{
+		flag: "flagpack:ru",
+		name: "RUSO",
+	},
+	{
+		flag: "flagpack:se",
+		name: "SUECO",
+	},
+];
 ---
 
 <!doctype html>
@@ -17,8 +50,16 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 				<a href="#" class="relative group hover:text-gray-300 font-extrabold uppercase text-gray-400 flex flex-row">
 					Idioma de la pagina
 					<Icon name="mdi:chevron-down" />
-					<div class="hidden group-hover:block absolute w-64 top-6 h-96 bg-slate-400">
-						<Icon name="mdi:account" />
+					<div class="hidden group-hover:block absolute w-64 top-6 h-96">
+						{
+							flags.map((flags)=>(
+							<div class="items-center w-1/2 inline-flex">
+								<Icon name={flags.flag} class='w-9 h-8 border-2 rounded-lg my-2 border-white'/>
+								<h6 class="font-semibold text-sm lowercase text-gray-500 px-1">{flags.name}</h6>
+							</div>
+							))
+						}
+				
 					</div>
 				</a>
 			</div>
