@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout title="Welcome to Astro.">
+	<Button>
+    <Icon name="mdi:delete-empty-outline" class='p-0 inline font-semibold' slot='pre'/>
+    <Icon name="mdi:alien-outline" slot='post'/>
+  </Button>
+	<Button text="Aceptar" isRed>
+    <Icon name="mdi:delete-empty-outline" class='p-0 inline font-semibold' slot='post'/>
+    <Icon name="mdi:alien-outline" slot='pre'/>
+  </Button>
+</Layout>
+
