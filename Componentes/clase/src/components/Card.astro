@@ -1,61 +1,74 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
+const skills = [
+	{
+		icon: "https://i.pinimg.com/236x/5c/1d/28/5c1d287577c71ab4932a744d9ea1bf15.jpg",
+		name: "I一刀流 ittōryū",
+	},
+	{
+		icon: "https://i.pinimg.com/564x/c4/3f/25/c43f25e59a724e0ae7331682f5e65899.jpg",
+		name: "二刀流 nitōryū",
+	},
+	{
+		icon: "https://i.pinimg.com/236x/a1/de/a9/a1dea9004963b23db6aaf451eaaf96e0.jpg",
+		name: "三刀流 santōryū",
+	},
+	{
+		icon: "https://i.pinimg.com/564x/00/bd/6c/00bd6c2b8c43c20c1e8a88007606cc37.jpg",
+		name: "九刀流 kyūtōryū",
+	},
+];
 ---
-
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<div class="bg-gradient-to-br from-zinc-50 to-zinc-150 rounded-3xl shadow-2xl flex items-center w-[40%] justify-around h-[600px] p-1 m-auto my-16">
+	<div class="h-[99%] w-[99%]">
+		<div class="h-[45%] w-[99%] flex justify-center items-center">
+			<div class="w-[50%] h-[99%] justify-center items-center flex ">
+				<div class="rounded-full flex h-[70%] w-[70%] p-2 hover:cursor-pointer hover:p-0">
+					<img src="https://i.pinimg.com/736x/b4/85/a6/b485a6de624cba68ee2d8ad1250c9435.jpg" alt="" class="rounded-full shadow-xl hover:shadow-2xl">
+				</div>
+			</div>
+			<div class="w-[50%] h-[99%]  justify-around p-2">
+				<div class="w-[95%] h-[20%] rounded-md border-l-2 px-1 pb-1 m-2 hover:bg-zinc-100 hover:cursor-pointer">
+					<h3 class="font-sans text-gray-400">Nombre</h3>
+					<p class="font-semibold">Roronoa Zoro</p>
+				</div>
+				<div class="w-[95%] h-[20%] rounded-md border-l-2 px-1 pb-1 m-2 hover:bg-zinc-100 hover:cursor-pointer">
+					<h3 class="font-sans text-gray-400">Edad</h3>
+					<p class="font-semibold">19</p>
+				</div>
+				<div class="w-[95%] h-[20%] rounded-md border-l-2 px-1 pb-1 m-2 hover:bg-zinc-100 hover:cursor-pointer">
+					<h3 class="font-sans text-gray-400">Origen</h3>
+					<p class="font-semibold">East Blue Villa Shimotsuk</p>
+				</div>
+				<div class="w-[95%] h-[20%] rounded-md border-l-2 px-1 pb-1 m-2 hover:bg-zinc-100 hover:cursor-pointer">
+					<h3 class="font-sans text-gray-400">Recompensa</h3>
+					<p class="font-semibold">$ 1.111.000.000</p>
+				</div>
+			</div>
+		</div>
+		<div class="w-[99%]">
+			<div class="w-[99%]">
+				<div class="border-l-2 rounded-md p-2 mb-2">
+					<h3 class="font-sans text-gray-400 mx-1">Habilidades</h3>
+				</div>
+				<div class="w-[99%] justify-around flex">
+					{
+					 skills.map(skills=>(
+						<div class=" rounded-full">
+							<img src={skills.icon} alt="" class=" h-16 w-16 hover:border-2 hover:cursor-pointer rounded-full shadow-2xl">
+								<h6 class="relative text-xs">{skills.name}</h6>
+						</div>
+					 ))
+					}
+				</div>
+			</div>
+			<div class="w-[99%]">
+				<div class="border-l-2 rounded-md p-2 mb-2 mt-2">
+					<h3 class="font-sans text-gray-400 mx-1">Historia</h3>
+				</div>
+				<div class="px-2">
+					<p class="text-justify">Zoro nació hace veintiún años en el East Blue,[15] siendo criado en la villa Shimotsuki. Cuando Zoro era un niño de diez años usaba el estilo de dos espadas y entrenaba en el dojo de la villa, destacando entre el resto de niños por su fuerza e incluso derrotando a personas de mayor edad que él</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
