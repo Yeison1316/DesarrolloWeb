@@ -1,4 +1,4 @@
-<script setup>
+<!---<script setup>
 import { ref } from 'vue';
 
 
@@ -24,4 +24,28 @@ function add(){
             </div>
         </div>
     </div>
+</template>-->
+<script setup>
+import { ref } from "vue"
+const indice = ref("")
+
+</script>
+<template>
+
+
+    <main class="h-screen w-full flex flex-col justify-center items-center gap-8">
+       <div class="flex gap-3 items-end">
+       <div class="w-4 h-7 " :class="{false : 'bg-slate-500'}, {'bg-red-500' : indice.split(' ').length >= 2}" ></div>
+       <div class="w-4 h-12 ":class="{false : 'bg-slate-500'}, {'bg-orange-500' : indice.split(' ').length >= 3}" ></div>
+       <div class="w-4 h-16 ":class="{false : 'bg-slate-500'}, {'bg-yellow-500' : indice.split(' ').length >= 5}" ></div>
+       <div class="w-4 h-20 " :class="{false : 'bg-slate-500'}, {'bg-green-500' : indice.split(' ').length >= 7}"></div>
+       </div>
+       <input type="text" v-model="indice">
+    </main>
+
+
+
+
+
+
 </template>

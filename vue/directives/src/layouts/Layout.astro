@@ -1,4 +1,7 @@
 ---
+import Parcial from '../components/vue/parcial.vue';
+import Async from '../components/vue/async.vue';
+
 interface Props {
 	title: string;
 }
@@ -6,9 +9,9 @@ interface Props {
 const { title } = Astro.props;
 //import Directives from '../components/vue/Directives.vue';
 //import TODO from '../components/vue/TODO.vue'
-import Parque from '../components/vue/Parque.vue';
-import Prueba from '../components/vue/Prueba.vue';
-import Clase from '../components/vue/Clase.vue';
+//import Parque from '../components/vue/Parque.vue';
+//import Prueba from '../components/vue/Prueba.vue';
+//import Clase from '../components/vue/Clase.vue';
 
 ---
 
@@ -25,7 +28,9 @@ import Clase from '../components/vue/Clase.vue';
 	<body>
 		<!-- <TODO client:load/>
 		<Parque client:load/>
-		<Prueba client:load/>-->
+		<Prueba client:load/>
 		<Clase client:load>
+		<Parcial client:load/>-->
+		<Async client:load/>
 	</body>
 </html>
