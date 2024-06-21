@@ -5,6 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 import Nuevo from "../components/nuevo.vue";
+import { Icon } from "astro-icon/components";
+import Pagina from "../components/pagina.vue";
 ---
 
 <!doctype html>
@@ -17,7 +19,7 @@ import Nuevo from "../components/nuevo.vue";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<Nuevo client:load />
+	<body class="">
+		<Pagina client:load />
 	</body>
 </html>
