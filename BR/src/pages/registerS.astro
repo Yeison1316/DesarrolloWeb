@@ -1,0 +1,25 @@
+---
+import RegisterSalon from "../components/RegisterSalon.vue";
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{"BeautyReserve"}</title>
+    </head>
+    <body
+        class="bg-[url('https://img.freepik.com/vector-premium/mejilla-floral-mujer-ilustracion-minima-dibujada-mano-dibujo-estilo-linea-estilo-arte-linea-elegante_633888-225.jpg')] bg-contain bg-fixed bg-center bg-no-repeat"
+    >
+        <RegisterSalon client:load />
+    </body>
+</html>

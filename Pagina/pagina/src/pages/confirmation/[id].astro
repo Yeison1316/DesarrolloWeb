@@ -1,0 +1,41 @@
+---
+// src/pages/confirmation/[id].astro
+import Layout from "../../layouts/BaseLayout.astro";
+
+const { id } = Astro.params;
+const bookingDetails = JSON.parse(localStorage.getItem(id)) ?? null;
+---
+
+<Layout>
+    <div
+        class="flex flex-col items-center justify-center min-h-screen bg-white"
+    >
+        <h2 class="text-2xl font-bold mb-6">Confirmación de la cita</h2>
+        {
+            bookingDetails ? (
+                <div class="bg-gray-100 p-8 rounded shadow-md">
+                    <p>
+                        <strong>Nombre:</strong> {bookingDetails.name}
+                    </p>
+                    <p>
+                        <strong>Fecha:</strong> {bookingDetails.date}
+                    </p>
+                    <p>
+                        <strong>Hora:</strong> {bookingDetails.time}
+                    </p>
+                    <p>
+                        <strong>Servicio:</strong> {bookingDetails.service}
+                    </p>
+                </div>
+            ) : (
+                <p>No se encontró la reserva.</p>
+            )
+        }
+        <a
+            href="/"
+            class="mt-6 bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600"
+        >
+            Volver a la página principal
+        </a>
+    </div>
+</Layout>

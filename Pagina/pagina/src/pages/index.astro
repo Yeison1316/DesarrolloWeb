@@ -1,0 +1,75 @@
+---
+// src/pages/index.astro
+import Layout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.vue";
+import Gallery from "../components/Gallery.vue";
+---
+
+<Layout>
+	<div
+		class="flex flex-col items-center justify-center min-h-screen bg-pink-100"
+	>
+		<section class="text-center mb-8">
+			<h1 class="text-4xl font-bold mb-4">
+				Bienvenido a Manicura y Pedicura
+			</h1>
+			<p class="text-lg mb-6">
+				Ofrecemos los mejores servicios de cuidado de uñas para que te
+				sientas y te veas espectacular.
+			</p>
+			<a
+				href="/booking"
+				class="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600"
+			>
+				Reservar una cita
+			</a>
+		</section>
+
+		<section class="w-full px-4 py-8 bg-white mb-8">
+			<h2 class="text-2xl font-bold text-center mb-6">
+				Nuestros Servicios
+			</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div
+					class="p-4 border rounded shadow hover:shadow-lg transition-shadow"
+				>
+					<h3 class="text-xl font-bold mb-2">Manicura</h3>
+					<p>
+						Cuida tus manos y uñas con nuestros tratamientos de
+						manicura.
+					</p>
+					<img
+						class="object-cover rounded"
+						src="https://i.pinimg.com/564x/1c/8e/73/1c8e73ee461539f274a974a0ddac293b.jpg"
+						alt="Manicura profesional"
+					/>
+				</div>
+				<div
+					class="p-4 border rounded shadow hover:shadow-lg transition-shadow"
+				>
+					<h3 class="text-xl font-bold mb-2">Pedicura</h3>
+					<p>Disfruta de una pedicura relajante y revitalizadora.</p>
+					<img
+						class="object-cover rounded"
+						src="https://i.pinimg.com/564x/7a/5a/53/7a5a5349210f1623f0ce4440067c4bfe.jpg"
+						alt="Pedicura profesional"
+					/>
+				</div>
+				<div
+					class="p-4 border rounded shadow hover:shadow-lg transition-shadow"
+				>
+					<h3 class="text-xl font-bold mb-2">Tratamientos de uñas</h3>
+					<p>
+						Ofrecemos una variedad de tratamientos para fortalecer y
+						embellecer tus uñas.
+					</p>
+					<img
+						class="object-cover rounded"
+						src="https://i.pinimg.com/564x/41/bf/02/41bf02b4753889796354c5756ad3a96a.jpg"
+						alt="Tratamiento de uñas"
+					/>
+				</div>
+			</div>
+		</section>
+	</div>
+</Layout>
